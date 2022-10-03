@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-    entry: path.resolve(__dirname, 'resources/react-src', 'app.jsx'),
+    entry: path.resolve(__dirname, 'resources/react-src', 'index.js'),
     output: {
         path: path.resolve(__dirname, 'public/react-build'),
         filename: 'bundle.js'
@@ -25,5 +25,12 @@ module.exports = {
                 }]
             }
         ]
-    }
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'public/react-build'),
+        },
+        compress: true,
+        port: 9000,
+    },
 }

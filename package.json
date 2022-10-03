@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "react:dev": "webpack-dev-server --open --config ./webpack.config.react.js --mode development",
-        "react:build": "webpack -p --config ./webpack.config.react.js --mode production"
+        "react:build": "webpack --config ./webpack.config.react.js --mode production"
     },
     "author": "Yury Tikhonov and Nikita Vedutenko",
     "license": "ISC",
@@ -17,6 +17,10 @@
         "webpack-dev-server": "^4.11.0"
     },
     "dependencies": {
-        "react": "^18.2.0"
+        "@redux-devtools/extension": "^3.2.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-redux": "^8.0.4",
+        "redux-thunk": "^2.4.1"
     }
 }
