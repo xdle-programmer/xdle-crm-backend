@@ -1,11 +1,19 @@
-const path = require('path')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'resources/react-src', 'index.js'),
+    entry: path.resolve(__dirname, 'resources/react-src', 'index.tsx'),
     output: {
         path: path.resolve(__dirname, 'public/react-build'),
+        publicPath: '',
         filename: 'bundle.js'
     },
+    plugins: [new HtmlWebpackPlugin({
+        hash: false,
+        filename: path.resolve(__dirname, 'public/react-build/index.html'),
+        template: path.resolve(__dirname, 'resources/react-src/index.html'),
+        cache: false
+    })],
     module: {
         rules: [
             {
@@ -13,6 +21,7 @@ module.exports = {
                 include: path.resolve(__dirname, 'resources/react-src'),
                 exclude: /node_modules/,
                 use: [{
+
                     loader: 'babel-loader',
                     options: {
                         presets: [
@@ -23,14 +32,24 @@ module.exports = {
                         ]
                     }
                 }]
-            }
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ]
     },
+    resolve:
+        {
+            extensions: ['.tsx', '.ts', '.js', '.jsx'],
+        },
     devServer: {
         static: {
             directory: path.join(__dirname, 'public/react-build'),
         },
         compress: true,
-        port: 9000,
+        port: 9003,
     },
-}
+    cache: false
+};
