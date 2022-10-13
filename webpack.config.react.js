@@ -16,23 +16,23 @@ module.exports = {
     })],
     module: {
         rules: [
-            {
-                test: /\.(jsx|js)$/,
-                include: path.resolve(__dirname, 'resources/react-src'),
-                exclude: /node_modules/,
-                use: [{
-
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            ['@babel/preset-env', {
-                                "targets": "defaults"
-                            }],
-                            '@babel/preset-react'
-                        ]
-                    }
-                }]
-            },
+            // {
+            //     test: /\.(jsx|js)$/,
+            //     include: path.resolve(__dirname, 'resources/react-src'),
+            //     exclude: /node_modules/,
+            //     use: [{
+            //
+            //         loader: 'babel-loader',
+            //         options: {
+            //             presets: [
+            //                 ['@babel/preset-env', {
+            //                     "targets": "defaults"
+            //                 }],
+            //                 '@babel/preset-react'
+            //             ]
+            //         }
+            //     }]
+            // },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
@@ -42,14 +42,16 @@ module.exports = {
     },
     resolve:
         {
-            extensions: ['.tsx', '.ts', '.js', '.jsx'],
+            extensions: ['.tsx', '.ts', '.js'],
         },
     devServer: {
         static: {
             directory: path.join(__dirname, 'public/react-build'),
         },
         compress: true,
-        port: 9003,
+        port: 9000,
+        hot: true,
+        historyApiFallback: true,
     },
     cache: false
 };

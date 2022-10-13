@@ -2,6 +2,7 @@
     "compilerOptions": {
         "outDir": "./public/react-build/",
         "noImplicitAny": true,
+        "sourceMap": true,
         "module": "es2022",
         "target": "es5",
         "jsx": "react",

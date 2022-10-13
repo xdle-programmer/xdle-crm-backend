@@ -4,7 +4,7 @@ import {App} from "./App";
 
 const container = document.getElementById('crm');
 const root = createRoot(container);
-root.render(<App string={'test'}/>);
+root.render(<App string={123}/>);
 
 
 // import ReactDOM from "react-dom";

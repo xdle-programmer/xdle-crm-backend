@@ -1,12 +1,12 @@
 import React from 'react';
 
-type AppProps = { string: string };
+type AppProps = { string: number };
 
 export const App = ({string}: AppProps) => {
 
     return (
         <div>
-            <h1>String 4: {string}</h1>
+            <h1>String 132213: {string}</h1>
 
             <input/>
         </div>
