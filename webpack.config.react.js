@@ -28,7 +28,7 @@ module.exports = {
     devServer: {
         static: './public/react-build',
         compress: true,
-        port: 9005,
+        port: 9001,
         hot: true,
         historyApiFallback: true,
     },
