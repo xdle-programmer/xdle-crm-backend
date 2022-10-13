@@ -1,8 +1,10 @@
-import React from 'react';
+import * as React from "react";
 
 type AppProps = { string: number };
 
 export const App = ({string}: AppProps) => {
+
+    console.log(5)
 
     return (
         <div>
@@ -11,19 +13,4 @@ export const App = ({string}: AppProps) => {
             <input/>
         </div>
     )
-};
-
-// import React, {useEffect} from 'react';
-//
-// function App() {
-//
-//     console.log(12312313)
-//
-//     return (
-//         <div>
-//             wqwerweaefqwfqdqd
-//         </div>
-//     );
-// }
-//
-// export default App;
+}

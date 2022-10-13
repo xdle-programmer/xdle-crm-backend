@@ -3,11 +3,10 @@
         "outDir": "./public/react-build/",
         "noImplicitAny": true,
         "sourceMap": true,
-        "module": "es2022",
+        "module": "es6",
         "target": "es5",
         "jsx": "react",
         "allowJs": true,
-        "allowSyntheticDefaultImports": true,
-        "moduleResolution": "Node"
+        "moduleResolution": "node"
     }
 }
