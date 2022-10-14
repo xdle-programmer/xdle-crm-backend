@@ -12,6 +12,8 @@
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "mll-lab/laravel-graphiql": "^1.0",
+        "nuwave/lighthouse": "^5.61",
         "whitecube/nova-flexible-content": "^1.0"
     },
     "require-dev": {

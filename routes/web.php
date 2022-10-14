@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,5 +14,12 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
+Route::get('dbexchange', function () {
+    return view('welcome');
+});
+Route::post('dbexchange', function (Request $request) {
+    return $request;
+});
+

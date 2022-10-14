@@ -63,6 +63,13 @@
       0 => 'Laravel\\Ui\\UiServiceProvider',
     ),
   ),
+  'mll-lab/laravel-graphiql' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'MLL\\GraphiQL\\GraphiQLServiceProvider',
+    ),
+  ),
   'nesbot/carbon' => 
   array (
     'providers' => 
@@ -82,6 +89,25 @@
     'providers' => 
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'nuwave/lighthouse' => 
+  array (
+    'aliases' => 
+    array (
+      'graphql' => 'Nuwave\\Lighthouse\\GraphQL',
+    ),
+    'providers' => 
+    array (
+      0 => 'Nuwave\\Lighthouse\\LighthouseServiceProvider',
+      1 => 'Nuwave\\Lighthouse\\Auth\\AuthServiceProvider',
+      2 => 'Nuwave\\Lighthouse\\Cache\\CacheServiceProvider',
+      3 => 'Nuwave\\Lighthouse\\GlobalId\\GlobalIdServiceProvider',
+      4 => 'Nuwave\\Lighthouse\\OrderBy\\OrderByServiceProvider',
+      5 => 'Nuwave\\Lighthouse\\Pagination\\PaginationServiceProvider',
+      6 => 'Nuwave\\Lighthouse\\Scout\\ScoutServiceProvider',
+      7 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
+      8 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
     ),
   ),
   'rap2hpoutre/fast-excel' => 
